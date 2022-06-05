@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState, useEffect} from 'react';
 
-function App() {
+import { Routes, Route, Link, useRoutes,} from "react-router-dom";
+
+import { Button } from "@material-ui/core";
+
+//Components 
+//partials
+import NavBar from './components/partials/NavBar';
+import Footer from './components/partials/Footer';
+
+import Home from './components/menu/Home';
+import Charts from './components/menu/Charts';
+
+//products
+import Products from './components/products/Products';
+import Product from './components/products/product/Product';
+
+//user
+import SignUp from './components/users/session/SignUp';
+import SignIn from './components/users/session/SignIn';
+
+//routes PRivates
+import Secret from './components/users/session/Secret';
+import Rutas from './components/Rutas';
+
+import "react-toastify/dist/ReactToastify.css";
+
+function App(props) {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+        
+        <Rutas/>
+        <Footer/>
+    </Fragment>
   );
 }
 
