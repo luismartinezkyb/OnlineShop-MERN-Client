@@ -10,10 +10,13 @@ import {ThemeProvider} from '@material-ui/core/styles';
 import Theme from './Theme'
 
 
-import carrousel1 from '../bootstrapshop/themes/images/carousel/5.png'
+
 
 const useStyles = makeStyles({
-        
+        pic: {
+            width: 1200,
+            height: 800
+        },
         juanito: {
             background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
             border: 0,
@@ -36,7 +39,7 @@ const Home = () => {
         	
             
             <div className="container">
-                <a href="/signUp"><img  src={carrousel1} alt="special offers"/></a>
+                <a href="/signUp"></a>
             </div>
             
         	
